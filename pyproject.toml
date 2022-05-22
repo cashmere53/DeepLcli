@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "deeplcli"
+version = "0.1.0"
+description = ""
+authors = ["cashmere53 <15913755+cashmere53@users.noreply.github.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+deepl = "^1.5.0"
+click = "^8.0.4"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+
+[tool.poetry.scripts]
+deepl = "deepl_cli.__main__:main"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
