@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
+from pathlib import Path
 from typing import Final
 
 from deepl import Translator, Language
 
 
-API_KEY: Final[str] = "8a84459e-10da-32d5-3e63-13749c3b6c13:fx"
+API_KEY: Final[str] = Path("./token.txt").read_text().rstrip("\r\n")
 TRANSLATOR: Translator = Translator(API_KEY)
 
 def translate(string: str) -> None:
